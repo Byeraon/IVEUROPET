@@ -1,0 +1,115 @@
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  height: 20vh;
+}
+
+.menu {
+  height: 97px;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.link {
+  position: relative;
+  color: #2191be;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 200ms;
+  font-family: Roboto, sans-serif;
+  margin-top: 58px;
+  font-size: 24px;
+  margin-left: 43px;
+}
+
+.link::before {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  transition: 200ms;
+  background-color: transparent;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  content: "";
+}
+
+.activeLink {
+  color: white;
+  position: relative;
+  z-index: 2;
+  margin-top: -58px;
+}
+
+.activeLink::before {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  transition: 200ms;
+  background-color: #2191be;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  content: "";
+}
+
+.logoPlace {
+  width: max-content;
+  z-index: 1;
+  margin-left: 152px;
+  height: 70%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+}
+
+.logoPlace h1 {
+  text-decoration: none;
+  color: #2191be;
+  margin: 0 47px 0 0;
+  font-family: Roboto, sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.logo {
+  height: 110px;
+  width: 110px;
+  margin-left: 47px;
+  background-color: white;
+  background-image: url(../../images/Logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.linelogo {
+  margin: 0 47px;
+  height: 100%;
+  width: 5px;
+  background-color: #2191be;
+  min-width: 5px;
+}
+
+header::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #2191be;
+  height: 5px;
+  width: 100%;
+}
